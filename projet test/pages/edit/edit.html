@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        Back
+      </button>
+    </ion-buttons>
+    <ion-title>Life Score</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-list-header>
+     Title
+    </ion-list-header>
+    <ion-item *ngFor="let score of scores">
+      <ion-range min="0" max="10" [(ngModel)]="{{score.name}}">
+        <ion-icon range-left small>0</ion-icon>
+        <ion-icon range-right>10</ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="danger" (click)="doPrompt()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

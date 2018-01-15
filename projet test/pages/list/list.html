@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Life Score</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" [navPush]="EditPage">
+        Edit
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list>
+  <ion-item *ngFor="let score of scores">
+    <h2>{{score.name}}</h2>
+    <ion-badge item-end>{{score.number}}</ion-badge>
+  </ion-item>
+</ion-list>
